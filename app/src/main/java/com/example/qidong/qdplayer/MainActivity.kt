@@ -6,7 +6,7 @@ import android.os.Bundle
 /**
  * @author qidong
  * @date 2019-04-02
- * desc 主页面
+ * desc
  */
 class MainActivity : AppCompatActivity() {
 
