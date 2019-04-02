@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <tab
+        android:id="@+id/tab_main"
+        icon="@mipmap/ic_launcher"
+        title="首页"/>
+    <tab
+        android:id="@+id/tab_mv"
+        icon="@mipmap/ic_launcher"
+        title="MV"/>
+
+    <tab
+        android:id="@+id/tab_vbang"
+        icon="@mipmap/ic_launcher"
+        title="首页"/>
+
+    <tab
+        android:id="@+id/tab_joy_order"
+        icon="@mipmap/ic_launcher"
+        title="悦单"/>
+
+</PreferenceScreen>
