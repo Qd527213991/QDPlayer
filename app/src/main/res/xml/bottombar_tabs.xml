@@ -3,21 +3,21 @@
 
     <tab
         android:id="@+id/tab_main"
-        icon="@mipmap/ic_launcher"
+        icon="@mipmap/home"
         title="首页"/>
     <tab
         android:id="@+id/tab_mv"
-        icon="@mipmap/ic_launcher"
+        icon="@mipmap/mv"
         title="MV"/>
 
     <tab
         android:id="@+id/tab_vbang"
-        icon="@mipmap/ic_launcher"
+        icon="@mipmap/brand_list"
         title="首页"/>
 
     <tab
         android:id="@+id/tab_joy_order"
-        icon="@mipmap/ic_launcher"
+        icon="@mipmap/joy_list"
         title="悦单"/>
 
 </PreferenceScreen>
