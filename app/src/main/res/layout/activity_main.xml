@@ -20,6 +20,7 @@
 
     <!--Bottombar-->
     <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:bb_tabXmlResource="@xml/bottombar_tabs">

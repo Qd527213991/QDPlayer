@@ -2,21 +2,21 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <tab
-        android:id="@+id/tab_main"
+        id="@+id/tab_main"
         icon="@mipmap/home"
         title="首页"/>
     <tab
-        android:id="@+id/tab_mv"
+        id="@+id/tab_mv"
         icon="@mipmap/mv"
         title="MV"/>
 
     <tab
-        android:id="@+id/tab_vbang"
+        id="@+id/tab_vbang"
         icon="@mipmap/brand_list"
         title="首页"/>
 
     <tab
-        android:id="@+id/tab_joy_order"
+        id="@+id/tab_joy_order"
         icon="@mipmap/joy_list"
         title="悦单"/>
 

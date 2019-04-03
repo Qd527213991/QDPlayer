@@ -1,9 +1,13 @@
 package com.example.qidong.qdplayer.ui.activity
 
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import com.example.qidong.qdplayer.R
 import com.example.qidong.qdplayer.base.BaseActivity
+import com.example.qidong.qdplayer.util.FragmentUtil
 import com.example.qidong.qdplayer.util.ToolbarManager
+import com.roughike.bottombar.BottomBar
+import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.find
 
 /**
@@ -22,5 +26,18 @@ class MainActivity :BaseActivity(),ToolbarManager{
 
     override fun initData() {
         initMainToolBar()
+    }
+
+    override fun initListener() {
+
+
+       bottom_bar.setOnTabSelectListener { tabId ->
+            val transaction=supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.container, FragmentUtil.fragmentUtil.getFragment(tabId),tabId.toString())
+            transaction.commit()
+        }
+
+
+
     }
 }
