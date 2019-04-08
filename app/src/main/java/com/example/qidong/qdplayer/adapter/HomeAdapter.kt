@@ -12,39 +12,43 @@ import com.itheima.player.model.bean.HomeItemBean
  * @date 2019/4/8
  * desc
  */
-class HomeAdapter:RecyclerView.Adapter<HomeAdapter.HomeHolder>() {
+class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeHolder>() {
 
-    private val list=ArrayList<HomeItemBean>()
+    private val list = ArrayList<HomeItemBean>()
 
     override fun onBindViewHolder(holder: HomeHolder, position: Int) {
 
-        if(position==list.size) return
-        val data=this.list.get(position)
-        val itemView=holder.itemView as HomeItemView
+        if (position == list.size) return
+        val data = this.list.get(position)
+        val itemView = holder.itemView as HomeItemView
         //条目刷新
         itemView.setData(data)
 
 
+    }
+
+    fun updateList(list: List<HomeItemBean>?) {
+        list?.let {
+            this.list.clear()
+            this.list.addAll(list)
+            notifyDataSetChanged()
+        }
 
     }
 
-    fun updateList(list:List<HomeItemBean>) {
-        this.list.clear()
-        this.list.addAll(list)
-        notifyDataSetChanged()
-    }
-
-    fun loadMore(list:List<HomeItemBean>) {
-        this.list.addAll(list)
-        notifyDataSetChanged()
+    fun loadMore(list: List<HomeItemBean>?) {
+        list?.let {
+            this.list.addAll(list)
+            notifyDataSetChanged()
+        }
     }
 
     override fun getItemCount(): Int {
-        return this.list.size+1
+        return this.list.size + 1
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):HomeHolder {
-        if(viewType==1) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeHolder {
+        if (viewType == 1) {
             //最后一条
             return HomeHolder(LoadMoreView(parent?.context))
         } else {
@@ -55,13 +59,13 @@ class HomeAdapter:RecyclerView.Adapter<HomeAdapter.HomeHolder>() {
     }
 
     override fun getItemViewType(position: Int): Int {
-        if (position==list.size) {
+        if (position == list.size) {
             return 1
         } else {
             return 0
         }
     }
 
-    class HomeHolder(itemView: View):RecyclerView.ViewHolder(itemView)
+    class HomeHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
 }
