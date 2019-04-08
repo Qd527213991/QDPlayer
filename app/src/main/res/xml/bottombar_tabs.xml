@@ -3,21 +3,21 @@
 
     <tab
         id="@+id/tab_main"
-        icon="@mipmap/home"
+        icon="@mipmap/ic_bottom_home_icon"
         title="首页"/>
     <tab
         id="@+id/tab_mv"
-        icon="@mipmap/mv"
+        icon="@mipmap/ic_bottom_mv_unselect"
         title="MV"/>
 
     <tab
         id="@+id/tab_vbang"
-        icon="@mipmap/brand_list"
-        title="首页"/>
+        icon="@mipmap/ic_bottom_vlist_unselect"
+        title="V榜"/>
 
     <tab
         id="@+id/tab_joy_order"
-        icon="@mipmap/joy_list"
+        icon="@mipmap/ic_bottom_mvlist_unselect"
         title="悦单"/>
 
 </PreferenceScreen>

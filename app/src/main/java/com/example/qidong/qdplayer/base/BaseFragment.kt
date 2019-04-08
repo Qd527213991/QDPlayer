@@ -35,14 +35,14 @@ abstract class BaseFragment:Fragment(),AnkoLogger{
     /**
      * 初始化数据
      */
-    protected fun initData() {
+    open protected fun initData() {
 
     }
 
     /**
      * 设置监听器
      */
-    protected fun initListener() {
+    open protected fun initListener() {
 
     }
 
